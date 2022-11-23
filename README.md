@@ -26,7 +26,7 @@ python ./libriiq_dwingeloo/create_dataset.py
 ### Format
 Acronyms: SOI = signal of interest, AMC = automatic modulation classification, SEI = signal emitter identification.
 
-LibriIQ-Dwingeloo contains 15240 RF IQ sequences, each having a duration 5 seconds. Among these, 6262 sequences contrain the target SOI. The `soi_*.json` files specify a 90/10 train/test split followed by a 80/20 train/val split for the task of SOI detection. Due to dataset imbalance, four-way random stratified sub-sampling can be performed using the different seeds. Similarly, `cls_*.json` specify the train/val/test splits for performing AMC and SEI on the subset of sequences that contain the SOI.
+LibriIQ-Dwingeloo contains 15240 RF IQ sequences, each having a duration 5 seconds. Among these, 6262 sequences contrain the target SOI. The `soi_*.json` files specify a 90/10 train/test split followed by a 80/20 train/val split for the task of SOI detection. Due to dataset imbalance, four-way random stratified sub-sampling can be performed using the provided seeds. Similarly, `cls_*.json` specify the train/val/test splits for performing AMC and SEI on the subset of sequences that contain the SOI.
 ```
 libriiq_dwingeloo
 ├── samples  				# directory of numpy float32 RF IQ sequences of shape (2, 240000)
@@ -47,7 +47,7 @@ libriiq_dwingeloo
 └── soi_train_80_val_20_seed_42.json
 ```
 
-## wav2vec-rf Installation
+## Install wav2vec-rf
 * Create conda environment
 ```
 conda create -n w2v-rf python=3.9 pip
@@ -65,7 +65,7 @@ pip install torch torchvision
 pip install mlflow pyrallis pandas tqdm pillow
 ```
 
-* Install wav2vec-rf repo
+* Install repo
 ```
 git clone https://github.com/phelps-matthew/wav2vec-rf.git
 cd wav2vec-rf
