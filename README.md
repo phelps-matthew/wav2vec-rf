@@ -24,24 +24,28 @@ python ./libriiq_dwingeloo/create_dataset.py
 ```
 
 ### Format
-+-- _config.yml
-+-- _drafts
-|   +-- begin-with-the-crazy-ideas.textile
-|   +-- on-simplicity-in-technology.markdown
-+-- _includes
-|   +-- footer.html
-|   +-- header.html
-+-- _layouts
-|   +-- default.html
-|   +-- post.html
-+-- _posts
-|   +-- 2007-10-29-why-every-programmer-should-play-nethack.textile
-|   +-- 2009-04-26-barcamp-boston-4-roundup.textile
-+-- _data
-|   +-- members.yml
-+-- _site
-+-- index.html
+Acronyms: SOI = signal of interest, AMC = automatic modulation classification, SEI = signal emitter identification.
 
+LibriIQ-Dwingeloo contains 15240 RF IQ sequences, each having a duration 5 seconds. Among these, 6262 sequences contrain the target SOI. The `soi_*.json` files specify a 90/10 train/test split followed by a 80/20 train/val split for the task of SOI detection. Due to dataset imbalance, four-way random stratified sub-sampling can be performed using the different seeds. Similarly, `cls_*.json` specify the train/val/test splits for performing AMC and SEI on the subset of sequences that contain the SOI.
+```
+libriiq_dwingeloo
+├── samples  				# directory of numpy float32 RF IQ sequences of shape (2, 240000)
+│   ├── iq_1452111_0000.npy
+│   ├── ...
+│   └── iq_6291503_0142.npy
+├── annot.json  			# global annotation json containing all metadata for each sequence
+├── cls_test_10.json  			# SOI sequence paths for held-out test set, used for SEI and AMC
+├── cls_train_80_val_20_seed_123.json   # SOI sequence paths of 80/20 train/val split, seed 123, used for SEI and AMC
+├── cls_train_80_val_20_seed_1337.json
+├── cls_train_80_val_20_seed_271.json
+├── cls_train_80_val_20_seed_42.json
+├── soi_paths.json                      # sequence paths containing SOI
+├── soi_test_10.json                    # sequence paths for held-out test set, used for SOI task
+├── soi_train_80_val_20_seed_123.json   # sequence paths of 80/20 train/val split, seed 123, used for SOI task
+├── soi_train_80_val_20_seed_1337.json
+├── soi_train_80_val_20_seed_271.json
+└── soi_train_80_val_20_seed_42.json
+```
 
 ## wav2vec-rf Installation
 * Create conda environment
