@@ -8,7 +8,7 @@ The LibriIQ-Dwingeloo dataset contains RF observations of low Earth orbit (LEO) 
 
 For seamless integration into ASR-based architectures, LibriIQ-Dwingeloo is designed to mimic the LibriSpeech ASR corpus. Taking account of the 48kHz sample rate, each RF IQ observation is split into a series of sequences with each sequence having an approximately equal number of samples as the LibriSpeech sequences used in wav2vec2.
 
-### Create dataset
-Download LibriIQ-Dwingeloo from https://www.kaggle.com/datasets/matthewphelps/libriiq-dwingeloo
+### Download dataset
+Download LibriIQ-Dwingeloo from https://www.kaggle.com/datasets/matthewphelps/libriiq-dwingeloo. Requires registering a Kaggle account (free). Output is a 5GB `archive.zip` file.
 
 ### Format
