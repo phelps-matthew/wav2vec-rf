@@ -37,7 +37,7 @@ For seamless integration into ASR-based architectures, LibriIQ-Dwingeloo is desi
 Download LibriIQ-Dwingeloo from https://www.kaggle.com/datasets/matthewphelps/libriiq-dwingeloo. Requires registering a Kaggle account (free). Output is a 5 GB `archive.zip` file.
 
 ### Create
-Ensure the wav2vec-rf library is installed as in (Installation)[#installation]
+Ensure the wav2vec-rf library is installed as in [Installation](#installation)
 
 
 
