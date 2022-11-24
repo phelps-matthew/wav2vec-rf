@@ -87,12 +87,12 @@ if __name__ == "__main__":
 
     # unzip archive.zip
     print(f"📦 Unzipping {source} to {target_dir}")
-    # with zipfile.ZipFile(source, 'r') as f:
-    #    f.extractall(target_dir)
+    with zipfile.ZipFile(source, 'r') as f:
+        f.extractall(target_dir)
 
     # Typical ASR uses 10-15 secs for translation and 2-4 secs for tasks like speaker id.
     # We will use 5 secs.
-    raw_dir = target_dir / "raw"
+    raw_dir = target_dir / "raw/raw"
     samples_dir = target_dir / "samples"
     samples_dir.mkdir(exist_ok=True)
 
