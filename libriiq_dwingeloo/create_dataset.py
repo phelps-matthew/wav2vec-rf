@@ -92,7 +92,8 @@ if __name__ == "__main__":
 
     # Typical ASR uses 10-15 secs for translation and 2-4 secs for tasks like speaker id.
     # We will use 5 secs.
-    raw_dir = target_dir / "raw/raw"
+    target_dir = target_dir / "dwingeloo"
+    raw_dir = target_dir / "raw"
     samples_dir = target_dir / "samples"
     samples_dir.mkdir(exist_ok=True)
 
