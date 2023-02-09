@@ -34,17 +34,22 @@ libriiq_dwingeloo
 │   ├── ...
 │   └── iq_6291503_0142.npy
 ├── annot.json  			# global annotation json containing all metadata for each sequence
+├── cls_80_train_20_val_seed_123.json   # SOI sequence paths of 80/20 train/val split, seed 123, used for SEI and AMC
+├── cls_80_train_20_val_seed_1337.json
+├── cls_80_train_20_val_seed_271.json
+├── cls_80_train_20_val_seed_42.json
+├── cls_map.json  			# mapping from class (e.g. satellite ID) to integer ID
 ├── cls_test_10.json  			# SOI sequence paths for held-out test set, used for SEI and AMC
-├── cls_train_80_val_20_seed_123.json   # SOI sequence paths of 80/20 train/val split, seed 123, used for SEI and AMC
-├── cls_train_80_val_20_seed_1337.json
-├── cls_train_80_val_20_seed_271.json
-├── cls_train_80_val_20_seed_42.json
+├── cls_weights.json  			# class balance weights for sequences containing SOI
+├── mode_map.json  			# mapping from modulation type to integer ID
+├── soi_80_train_20_val_seed_123.json   # sequence paths of 80/20 train/val split, seed 123, used for SOI task
+├── soi_80_train_20_val_seed_1337.json
+├── soi_80_train_20_val_seed_271.json
+├── soi_80_train_20_val_seed_42.json
+├── soi_cls_map.json  			# mapping from class (e.g. Satellite ID) to integer ID, *including* null class
+├── soi_map.json                        # mapping from signal, no signal to integer 0 or 1
 ├── soi_paths.json                      # sequence paths containing SOI
-├── soi_test_10.json                    # sequence paths for held-out test set, used for SOI task
-├── soi_train_80_val_20_seed_123.json   # sequence paths of 80/20 train/val split, seed 123, used for SOI task
-├── soi_train_80_val_20_seed_1337.json
-├── soi_train_80_val_20_seed_271.json
-└── soi_train_80_val_20_seed_42.json
+└── soi_test_10.json                    # sequence paths for held-out test set, used for SOI task
 ```
 
 ## Install wav2vec-rf
