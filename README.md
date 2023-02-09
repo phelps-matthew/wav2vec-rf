@@ -13,9 +13,15 @@ For seamless integration into ASR-based architectures, LibriIQ-Dwingeloo is desi
 Download LibriIQ-Dwingeloo from https://www.kaggle.com/datasets/matthewphelps/libriiq-dwingeloo. Requires registering a Kaggle account (free). Output is a 5 GB `archive.zip` file.
 
 ### Create
+Clone the github repo.
+```bash
+git clone https://github.com/phelps-matthew/wav2vec-rf.git
+cd ./wav2vec-rf
+```
+
 Extract zipped contents and partition dataset, resulting in 28 GB of RF IQ sample sequences.
-```python
-# requires numpy and tqdm
+```bash
+# requires python, numpy and tqdm
 # alteratively, you can install the wav2vec-rf library as in #wav2vec-rf Installation
 pip install numpy tqdm
 
