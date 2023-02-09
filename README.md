@@ -28,7 +28,7 @@ Acronyms: SOI = signal of interest, AMC = automatic modulation classification, S
 
 LibriIQ-Dwingeloo contains 15240 RF IQ sequences, each having a duration 5 seconds. Among these, 6262 sequences contrain the target SOI. The `soi_*.json` files specify a 90/10 train/test split followed by a 80/20 train/val split for the task of SOI detection. Due to dataset imbalance, four-way random stratified sub-sampling can be performed using the provided seeds. Similarly, `cls_*.json` specify the train/val/test splits for performing AMC and SEI on the subset of sequences that contain the SOI.
 ```
-libriiq_dwingeloo
+libriiq_dwingeloo/dwingeloo
 ├── samples  				# directory of numpy float32 RF IQ sequences of shape (2, 240000)
 │   ├── iq_1452111_0000.npy
 │   ├── ...
